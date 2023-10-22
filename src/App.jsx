@@ -7,6 +7,7 @@ import Login from './Pages/Login';
 import PerfilAdmin from './Pages/PerfilAdmin';
 import PerfilUsuario from './Pages/PerfilUsuario';
 import Registro from './Pages/Registro.JSX';
+import NotFound from './Pages/NotFound';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path='/Perfil/Administrador' element={<PerfilAdmin />} />
       <Route path='/Perfil/Usuario' element={<PerfilUsuario />} />
       <Route path='/Registro' element={<Registro/>} />
+      <Route path='*' element={<NotFound/>} />
     </Routes>
   )
 }
