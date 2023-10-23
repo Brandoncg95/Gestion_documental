@@ -11,7 +11,7 @@ function Registro() {
         console.log(data)
     })
 return (
-    <div className="h-[calc(100vh-64px)] flex items-center justify-center">
+    <div className="h-[calc(100vh-2rem)] mt-20 flex items-center justify-center">
         <Card>
     <h3 className="text-2xl font-bold text-center">Registro Usuario</h3>
     <form onSubmit={onSubmit}>
