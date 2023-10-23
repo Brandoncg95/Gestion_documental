@@ -1,4 +1,12 @@
-import {Button,Card,Input} from "../componentes/ui"
+import {
+    Card,
+    CardHeader,
+    CardBody,
+    CardFooter,
+    Button,
+    Typography,
+    } from "@material-tailwind/react";
+import {Input} from "../componentes/ui"
 import {useForm} from "react-hook-form"
 
 function Registro() {
@@ -10,12 +18,22 @@ function Registro() {
     const onSubmit= handleSubmit(data => {
         console.log(data)
     })
+    
 return (
-    <div className="h-[calc(100vh-2rem)] mt-20 flex items-center justify-center">
-        <Card>
-    <h3 className="text-2xl font-bold text-center">Registro Usuario</h3>
-    <form onSubmit={onSubmit}>
+    <div className="h-[calc(100vh-10rem)] mt-20 flex items-center justify-center">
+    <Card className="absolute top-2/4 left-2/4 w-full max-w-[24rem] -translate-y-2/4 -translate-x-2/4">
+        <CardHeader 
+        variant="gradient"
+        color="blue"
+        className="mb-4 grid h-28 place-items-center">
 
+        <Typography variant="h3" color="white">
+            Registro Usuario
+        </Typography>
+        </CardHeader>
+        <CardBody className="flex flex-col gap-8">
+            
+    <form onSubmit={onSubmit}>
         <Input placeholder="Registra nombre" {...register("nombre", {
             required: true
             })}/>
@@ -50,16 +68,19 @@ return (
             required: true
             })}/>
             {
-                errors.password && <p className=" text-red-400"> La contraseña es requerida</p>
+                errors.contraseña && <p className=" text-red-400"> La contraseña es requerida</p>
             }
         
-        <div className=" flex justify-center w-full mt-4">
-        <Button>Registrar</Button>  
-        </div>
-    </form>
+        <div className="flex justify-center w-full mt-4">
+            <Button type="submit" color= "light-blue" ripple={true}>
+                Registrar
+            </Button>
+            </div>
+        </form>
+        </CardBody>
     </Card>
     </div>
-    )
+);
 }
 
-export default Registro
+export default Registro;
