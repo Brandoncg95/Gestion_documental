@@ -1,6 +1,6 @@
 import React from 'react'
 import {Routes, Route} from "react-router-dom"
-import HomeAdmi from "./Pages/HomeAdmin";
+import Home from "./Pages/dashboard/Home";
 import GestionUsuarios from "./Pages/GestionUsuarios";
 import HomeUsuario from './Pages/HomeUsuario';
 import Login from './Pages/Login';
@@ -12,7 +12,7 @@ import NotFound from './Pages/NotFound';
 function App() {
   return (
     <Routes>
-      <Route path='/' element={<HomeAdmi />} />
+      <Route path='/' element={<Home />} />
       <Route path='/GestionUsuarios' element={<GestionUsuarios />} />
       <Route path='/Home/Usuario' element={<HomeUsuario />} />
       <Route path='/Login' element={<Login />} />
