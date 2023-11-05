@@ -6,7 +6,7 @@ import HomeUsuario from './Pages/HomeUsuario';
 import Login from './Pages/Login';
 import PerfilAdmin from './Pages/PerfilAdmin';
 import PerfilUsuario from './Pages/PerfilUsuario';
-import Registro from './Pages/Registro.JSX';
+import Registro from './Pages/Registro.jsx';
 import NotFound from './Pages/NotFound';
 
 function App() {
